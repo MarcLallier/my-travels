@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Travel_1 from './components/Travel_1'
+import Travel_2 from './components/Travel_2'
+
+const trip1  = {
+  destination : "Paris", 
+  distance    : "100km",
+   country    : "France", 
+   landscape      : "http://paris.cg.mfa.gov.tr/Content/assets/m-covers/1100118/phone1.jpg"
+}  
+
+const trip2 = {
+  destination : "Petaouchnok",
+  distance : "archi loin",
+  country : "Trouducudumond",
+  landscape : "http://media.topito.com/wp-content/uploads/2015/12/une_nom_ville_perdue.jpg"
+}
 
 class App extends Component {
   render() {
@@ -19,6 +35,8 @@ class App extends Component {
           >
             Learn React
           </a>
+          <Travel_1 {...trip1} />
+          <Travel_2 {...trip2} />
         </header>
       </div>
     );
